@@ -24,6 +24,12 @@ export const getWalletSupports = () => {
   return undefined;
 };
 
+export const pixelToRem = (...values: number[]) => {
+  return values
+    .reduce((acc, current) => (acc += current / 16 + `rem `), "")
+    .trim();
+}
+
 export const dotsSensitive = ({
   originalString,
   startPosition,

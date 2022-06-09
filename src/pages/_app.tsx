@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "assets/styles/reset.css";
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import Layout from "layouts";
