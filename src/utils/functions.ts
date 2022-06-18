@@ -89,3 +89,7 @@ export const parseJSON = <T>(jsonString: string | null): T | undefined => {
     return undefined;
   }
 };
+
+export const reload = () => {
+  window?.location?.reload?.();
+};
