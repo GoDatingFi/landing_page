@@ -1,0 +1,116 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 237px;
+  padding-top: 88px;
+  padding-bottom: 88px;
+  background: var(--gdf-blue-tangaroa);
+  z-index: 10;
+}
+
+.cards {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(6, minmax(calc(100% / 6 - 40px), 1fr));
+  gap: 40px;
+  width: var(--gdf-default-container-width);
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    &:hover {
+      .card-image {
+      }
+      .social-network {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        column-gap: 8px;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        padding-bottom: 15%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        z-index: 10;
+      }
+
+      .card-image {
+        outline: 2px solid var(--gdf-purple-heliotrope);
+      }
+
+      .card-content {
+        margin-top: 4px;
+      }
+
+      .bg-mask {
+        position: absolute;
+        height: calc(100% + 12px + 32px + 44px + 2px);
+        bottom: -20px;
+        width: 100%;
+        border-radius: 16px;
+        background: var(--gdf-blue-zodiac);
+        z-index: -1;
+      }
+
+      .title,
+      .summary {
+        color: var(--gdf-purple-heliotrope) !important;
+      }
+    }
+
+    .card-image {
+      display: flex;
+      flex-shrink: 0;
+      flex-basis: auto;
+      align-items: stretch;
+      width: calc((1430px - 40px * 5) / 6);
+      height: calc((1430px - 40px * 5) / 6);
+      border-radius: 50%;
+      border-color: var(--gdf-blue-whisper);
+      background: var(--gdf-blue-whisper);
+      outline: 1px solid var(--gdf-blue-whisper);
+      overflow: hidden;
+      position: relative;
+
+      & a {
+        width: 100%;
+      }
+
+      & span {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .card-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 4px;
+      text-align: center;
+      position: relative;
+
+      .title {
+        font: var(--font-heading-10);
+        z-index: 2;
+      }
+
+      .summary {
+        font: var(--font-heading-3);
+        color: var(--gdf-blue-ghost);
+        z-index: 2;
+      }
+    }
+  }
+}

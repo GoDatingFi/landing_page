@@ -1,0 +1,145 @@
+.wrapper {
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: calc(100vh - 48px);
+  min-height: 899px;
+  background: linear-gradient(180deg, #1d83ae 0%, #031d44 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../assets/images/banner/background-dot.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: color-dodge;
+}
+
+.bg-gradient-ellipse {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  right: -7%;
+
+  .bg-color-gradient-ellipse {
+    right: -50%;
+    width: 92%;
+    height: 80%;
+    opacity: 0.4;
+    filter: blur(300px);
+    background: var(--gdf-blue-cyan);
+  }
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--gdf-default-container-width);
+}
+
+.logo {
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+  }
+}
+
+.btn-connect-wallet {
+  background-color: var(--gdf-purple-medium);
+  color: var(--gdf-white);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 63px;
+  z-index: 10;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  width: var(--gdf-default-container-width);
+  height: 100%;
+  align-items: center;
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    flex-basis: 45%;
+    z-index: 10;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      flex-wrap: wrap;
+      text-align: justify;
+
+      .paragraph {
+        width: 75%;
+      }
+
+      .btn-regis {
+        background-color: var(--gdf-purple-medium);
+        color: var(--gdf-white);
+        width: 167px;
+        padding: 15px 28px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .qrcode {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+
+      svg + svg {
+        margin-left: 48px;
+      }
+    }
+  }
+  .banner-image {
+    position: absolute;
+    right: 1%;
+    bottom: -5%;
+    width: 62%;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}

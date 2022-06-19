@@ -1,0 +1,13 @@
+.active-nav {
+  color: var(--gdf-white);
+  font: var(--font-heading-6);
+
+  &::before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: var(--gdf-white);
+  }
+}

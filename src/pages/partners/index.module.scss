@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 188px;
+  padding-bottom: 148px;
+  width: 100%;
+  min-height: 1070px;
+  overflow: hidden;
+  position: relative;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 103px;
+    width: var(--gdf-default-container-width);
+    position: relative;
+  }
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/images/partner/background-partners.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: color-dodge;
+}
+
+.bg-gradient-ellipse {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--gdf-default-container-width);
+  height: 100%;
+  z-index: -1;
+
+  .bg-color-gradient-ellipse {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    filter: blur(300px);
+    background: var(--gdf-blue-curious);
+  }
+}
+
+.backers {
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-columns: repeat(5, minmax(calc(100% / 5 - 110px), 1fr));
+  gap: 140px 110px;
+  width: 100%;
+
+  .backer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
