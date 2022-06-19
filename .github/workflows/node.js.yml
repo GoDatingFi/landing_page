@@ -30,6 +30,6 @@ jobs:
           port: ${{ secrets.SSH_PORT_DEV }}
           script: |
             cd /home/dev/docker
-            docker-compose -f docker-compose.market_place.dev.yml --compatibility down
-            docker-compose -f docker-compose.market_place.dev.yml --compatibility pull
-            docker-compose -f docker-compose.market_place.dev.yml --compatibility up -d
+            docker-compose -f docker-compose.landing.page.dev.yml --compatibility down
+            docker-compose -f docker-compose.landing.page.dev.yml --compatibility pull
+            docker-compose -f docker-compose.landing.page.dev.yml --compatibility up -d
