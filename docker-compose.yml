@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-
-  frontend:
+  go.dating.fi.lading.page.frontend:
+    image: edwardpm1206/go-dating-fi-landing-page-frontend:latest
     container_name: landing-page-frontend
     build:
       context: .
@@ -13,7 +13,7 @@ services:
     ports:
       - ${PORT}:3000
     expose:
-      - "3000"
+      - '3000'
     env_file:
       - .env.development
     tty: true
