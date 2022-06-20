@@ -1,7 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect, memo, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { google } from 'googleapis';
 import UserIcon from 'assets/images/contact-info/user.svg';
 import EmailIcon from 'assets/images/contact-info/email.svg';
 import PhoneCallIcon from 'assets/images/contact-info/phonecall.svg';
@@ -9,7 +8,7 @@ import PencilIcon from 'assets/images/contact-info/pencil.svg';
 import Input from 'components/input';
 import TextArea from 'components/text-area';
 import Button from 'components/button';
-import { appendSpreadsheet } from 'api/google-sheet/submit';
+// import { appendSpreadsheet } from 'api/google-sheet/submit';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { ERRORS } from 'utils/constant';

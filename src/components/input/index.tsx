@@ -1,7 +1,6 @@
 import { ChangeEventHandler, InputHTMLAttributes, ReactNode, useCallback, useEffect } from 'react';
 import cx from 'classnames';
 import Styled from './index.style';
-import { resolveSrv } from 'dns';
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -15,7 +14,6 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   type?: string;
   onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
-  setValue?: (value: any) => void;
 }
 
 const Input = ({
@@ -31,13 +29,8 @@ const Input = ({
   type = 'text',
   required = false,
   onChange,
-  setValue,
   ...props
 }: Props) => {
-  useEffect(() => {
-    setValue?.(value);
-  }, [onChange]);
-
   return (
     <Styled.Input className={cx(className)}>
       <Styled.PreIcon className="pre-icon">{preIcon}</Styled.PreIcon>
