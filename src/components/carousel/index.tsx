@@ -49,7 +49,7 @@ const Carousel = ({
     }
 
     const dotsLength = data.length - (numberPerViewport ?? 0) + 1;
-    return new Array(dotsLength)
+    return new Array(dotsLength > -1 ? dotsLength : 0)
       .fill(0)
       .map((_, index) => (
         <Styled.Dot key={index} $isActive={activeIndex === index} onClick={() => setActiveIndex(index)} />

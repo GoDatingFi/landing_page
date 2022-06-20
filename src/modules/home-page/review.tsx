@@ -54,7 +54,7 @@ const Review = () => {
           <h2>Testimonials</h2>
         </div>
         <div className={cx('reviews')}>
-          <Carousel hasNavigator={false} data={renderReview} />
+          <Carousel hasNavigator={false} data={renderReview} numberPerViewport={1} />
         </div>
       </div>
     </section>
