@@ -11,8 +11,14 @@ services:
       - '.:/app'
       - '/app/node_modules'
     ports:
-      - 3000:3000
+      - ${PORT}:3000
+    expose:
+      - '3000'
     env_file:
       - .env.development
     tty: true
     stdin_open: true
+    environment:
+      - REACT_APP_STAGE=${REACT_APP_STAGE}
+      - PORT=${PORT}
+      - NODE_ENV=${NODE_ENV}
