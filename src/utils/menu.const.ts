@@ -4,7 +4,7 @@ const Menu = [
     label: 'Home',
   },
   {
-    to: '/market',
+    to: `${process.env.NEXT_PUBLIC_MARKETPLACE_URL}`,
     label: 'Market',
   },
   {

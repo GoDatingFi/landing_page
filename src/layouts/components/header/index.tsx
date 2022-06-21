@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import LogoImg from 'assets/images/Logo.png';
 import Couple from 'assets/images/banner/couple.png';
-import styles from './index.module.scss';
 import Button from 'components/button';
-import classNames from 'classnames/bind';
 import MenuHeader from './Menu';
 import QRCode2 from 'assets/images/icons/qrcode-2.svg';
 import QRCode1 from 'assets/images/icons/qrcode-1.svg';
+import classNames from 'classnames/bind';
+import styles from './index.module.scss';
 
 const cx = classNames.bind(styles);
 

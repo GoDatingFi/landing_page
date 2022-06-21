@@ -18,7 +18,9 @@
     align-items: center;
     justify-content: center;
     row-gap: 88px;
-    width: var(--gdf-default-container-width);
+    width: 100%;
+    max-width: var(--gdf-default-container-width);
+    padding: 0 32px;
     position: relative;
   }
 

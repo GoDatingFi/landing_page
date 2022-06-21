@@ -42,23 +42,25 @@ const Products = () => {
           </div>
         </article>
         <article className={cx('products-second')}>
-          <div className={cx('products-second-left')}>
-            <h2 className="gdf-heading-14">It’s easy to find that mystery person!</h2>
-            <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, lacus platea volutpat vulputate elementum
-              egestas blandit.{' '}
-            </h2>
-          </div>
-          <div className={cx('products-second-right')}>
-            <div className={cx('bg-gradient-ellipse')}>
-              <div className={cx('bg-color-gradient-ellipse')}></div>
+          <div className={cx('products-second-inner')}>
+            <div className={cx('products-second-left')}>
+              <h2 className="gdf-heading-14">It’s easy to find that mystery person!</h2>
+              <h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, lacus platea volutpat vulputate
+                elementum egestas blandit.{' '}
+              </h2>
             </div>
-            <span className={cx('smarphone-left')}>
-              <Image src={SmartphoneImg1} alt={''} />
-            </span>
-            <span className={cx('smarphone-right')}>
-              <Image src={SmartphoneImg2} alt={''} />
-            </span>
+            <div className={cx('products-second-right')}>
+              <div className={cx('bg-gradient-ellipse')}>
+                <div className={cx('bg-color-gradient-ellipse')}></div>
+              </div>
+              <span className={cx('smarphone-left')}>
+                <Image src={SmartphoneImg1} alt={''} />
+              </span>
+              <span className={cx('smarphone-right')}>
+                <Image src={SmartphoneImg2} alt={''} />
+              </span>
+            </div>
           </div>
         </article>
         <article className={cx('products-third')}>
@@ -75,8 +77,10 @@ const Products = () => {
             <div className={cx('products-third-right')}>
               <h2 className="gdf-heading-14">NFT</h2>
               <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam congue sed risus sapien a. Mi
-                imperdiet vitae id rhoncus ante commodo id. Facilisi arcu et fusce eget dictumst risus sodales nisi.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rem iste nulla recusandae cum placeat, in
+                molestiae architecto similique magnam commodi culpa excepturi, voluptates obcaecati minima repellat
+                repellendus velit fugiat sed quas. Sed impedit, aut deserunt alias, deleniti aperiam debitis repellat
+                voluptatibus dolor quas ad!
               </h2>
             </div>
           </div>

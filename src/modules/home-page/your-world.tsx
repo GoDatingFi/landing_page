@@ -1,18 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './your-world.module.scss';
-import Heart from 'assets/images/home/heart.png';
-import Message from 'assets/images/home/message.png';
-import Protected from 'assets/images/home/protected.png';
-import Searach from 'assets/images/home/searach.png';
-import Start1 from 'assets/images/home/start1.png';
+import Heart from 'assets/images/home/heart.svg';
+import Message from 'assets/images/home/messages.svg';
+import Search from 'assets/images/home/search.svg';
+import Protected from 'assets/images/home/protected.svg';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 const PersonCard = () => {
   return (
     <section className={cx('wrapper')}>
-      {/*<div className={cx('bg-blend-mode')}></div>*/}
       <div className={cx('bg-gradient-ellipse')}>
         <div className={cx('bg-color-gradient-ellipse')}></div>
       </div>
@@ -20,30 +18,30 @@ const PersonCard = () => {
         <h2 className={cx('title-header')}>Your world</h2>
         <div className={cx('content')}>
           <article>
-            <Image src={Heart} alt="" />
+            <Heart />
             <header>
               <p>Approximately 3 million members logged in daily.</p>
             </header>
           </article>
 
           <article>
-            <Image src={Heart} alt="" />
+            <Message />
             <header>
-              <p>Approximately 3 million members logged in daily.</p>
+              <p>Multiple ways to connect with members.</p>
             </header>
           </article>
 
           <article>
-            <Image src={Heart} alt="" />
+            <Search />
             <header>
-              <p>Approximately 3 million members logged in daily.</p>
+              <p>Search for members who have your favourite traits.</p>
             </header>
           </article>
 
           <article>
-            <Image src={Heart} alt="" />
+            <Protected />
             <header>
-              <p>Approximately 3 million members logged in daily.</p>
+              <p>High level of security, ensuring user's personal information</p>
             </header>
           </article>
         </div>
