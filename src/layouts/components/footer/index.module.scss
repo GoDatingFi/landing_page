@@ -14,7 +14,9 @@
   justify-content: center;
   flex-direction: column;
   row-gap: 5px;
-  width: var(--gdf-default-container-width);
+  width: 100%;
+  max-width: var(--gdf-default-container-width);
+  padding: 0 32px;
 }
 
 .logo {

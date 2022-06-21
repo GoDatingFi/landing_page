@@ -16,7 +16,6 @@
   align-items: center;
   width: 100%;
   min-height: 982px;
-  padding-bottom: 148px;
   overflow: hidden;
   position: relative;
 
@@ -26,7 +25,9 @@
     align-content: center;
     height: 618px;
     column-gap: 126px;
-    width: var(--gdf-default-container-width);
+    width: 100%;
+    max-width: var(--gdf-default-container-width);
+    padding: 0 32px 148px;
     position: relative;
   }
 }

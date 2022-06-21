@@ -1,7 +1,5 @@
 import { NextPageWithLayout } from 'utils/interfaces';
-import classNames from 'classnames/bind';
 import Image from 'next/image';
-import styles from './index.module.scss';
 import { ReactElement } from 'react';
 import Layout from 'layouts';
 import Link from 'next/link';
@@ -13,6 +11,8 @@ import Facebook from 'assets/images/social-media/facebook-card.svg';
 import Twitter from 'assets/images/social-media/twitter-card.svg';
 import Linkedin from 'assets/images/social-media/linkedin-card.svg';
 import BackgroundTeam from 'assets/images/team/background-team.svg';
+import classNames from 'classnames/bind';
+import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Partners: NextPageWithLayout = () => {
@@ -112,6 +112,33 @@ const Partners: NextPageWithLayout = () => {
                 <Link href="/">
                   <a>
                     <Image src={Image4} alt="" />
+                    <div className={cx('social-network')}>
+                      <Facebook />
+                      <Twitter />
+                      <Linkedin />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <header className={cx('card-content')}>
+                <div className={cx('bg-mask')}></div>
+                <p className={cx('title')}>
+                  <Link href="/">
+                    <a>Ava, 25</a>
+                  </Link>
+                </p>
+                <p className={cx('summary')}>
+                  <Link href="/">
+                    <a>Sanya, China</a>
+                  </Link>
+                </p>
+              </header>
+            </article>
+            <article className={cx('card')}>
+              <div className={cx('card-image')}>
+                <Link href="/">
+                  <a>
+                    <Image src={Image1} alt="" />
                     <div className={cx('social-network')}>
                       <Facebook />
                       <Twitter />
@@ -361,6 +388,60 @@ const Partners: NextPageWithLayout = () => {
                 </p>
               </header>
             </article>
+            <article className={cx('card')}>
+              <div className={cx('card-image')}>
+                <Link href="/">
+                  <a>
+                    <Image src={Image1} alt="" />
+                    <div className={cx('social-network')}>
+                      <Facebook />
+                      <Twitter />
+                      <Linkedin />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <header className={cx('card-content')}>
+                <div className={cx('bg-mask')}></div>
+                <p className={cx('title')}>
+                  <Link href="/">
+                    <a>Ava, 25</a>
+                  </Link>
+                </p>
+                <p className={cx('summary')}>
+                  <Link href="/">
+                    <a>Sanya, China</a>
+                  </Link>
+                </p>
+              </header>
+            </article>
+            <article className={cx('card')}>
+              <div className={cx('card-image')}>
+                <Link href="/">
+                  <a>
+                    <Image src={Image2} alt="" />
+                    <div className={cx('social-network')}>
+                      <Facebook />
+                      <Twitter />
+                      <Linkedin />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <header className={cx('card-content')}>
+                <div className={cx('bg-mask')}></div>
+                <p className={cx('title')}>
+                  <Link href="/">
+                    <a>Ava, 25</a>
+                  </Link>
+                </p>
+                <p className={cx('summary')}>
+                  <Link href="/">
+                    <a>Sanya, China</a>
+                  </Link>
+                </p>
+              </header>
+            </article>
           </div>
         </div>
 
@@ -565,6 +646,60 @@ const Partners: NextPageWithLayout = () => {
                 <Link href="/">
                   <a>
                     <Image src={Image4} alt="" />
+                    <div className={cx('social-network')}>
+                      <Facebook />
+                      <Twitter />
+                      <Linkedin />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <header className={cx('card-content')}>
+                <div className={cx('bg-mask')}></div>
+                <p className={cx('title')}>
+                  <Link href="/">
+                    <a>Ava, 25</a>
+                  </Link>
+                </p>
+                <p className={cx('summary')}>
+                  <Link href="/">
+                    <a>Sanya, China</a>
+                  </Link>
+                </p>
+              </header>
+            </article>
+            <article className={cx('card')}>
+              <div className={cx('card-image')}>
+                <Link href="/">
+                  <a>
+                    <Image src={Image1} alt="" />
+                    <div className={cx('social-network')}>
+                      <Facebook />
+                      <Twitter />
+                      <Linkedin />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+              <header className={cx('card-content')}>
+                <div className={cx('bg-mask')}></div>
+                <p className={cx('title')}>
+                  <Link href="/">
+                    <a>Ava, 25</a>
+                  </Link>
+                </p>
+                <p className={cx('summary')}>
+                  <Link href="/">
+                    <a>Sanya, China</a>
+                  </Link>
+                </p>
+              </header>
+            </article>
+            <article className={cx('card')}>
+              <div className={cx('card-image')}>
+                <Link href="/">
+                  <a>
+                    <Image src={Image2} alt="" />
                     <div className={cx('social-network')}>
                       <Facebook />
                       <Twitter />
