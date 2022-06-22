@@ -153,7 +153,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var utils_functions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9024);
 /* harmony import */ var components_error_boundary__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9983);
 /* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3590);
-/* harmony import */ var layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3967);
+/* harmony import */ var layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9925);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_toastify__WEBPACK_IMPORTED_MODULE_1__]);
@@ -436,6 +436,13 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ 5337:
+/***/ ((module) => {
+
+module.exports = require("react-scroll-to-top");
+
+/***/ }),
+
 /***/ 997:
 /***/ ((module) => {
 
@@ -464,7 +471,7 @@ module.exports = import("react-toastify");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [922,61,967,635], () => (__webpack_exec__(1336)));
+var __webpack_exports__ = __webpack_require__.X(0, [922,61,925,635], () => (__webpack_exec__(1336)));
 module.exports = __webpack_exports__;
 
 })();

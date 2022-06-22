@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import NFT03 from 'assets/images/nft/nft-03.png';
+import NFT04 from 'assets/images/nft/nft-04.png';
 import SmartphoneImg1 from 'assets/images/home/smartphone-img1.png';
 import SmartphoneImg2 from 'assets/images/home/smartphone-img2.png';
 import NFTGroup from 'assets/images/home/nft-group.svg';
@@ -15,10 +17,7 @@ const Products = () => {
         <div className={cx('section-header')}>
           <h2 className={cx('header-title')}>products</h2>
           <h2>All you need for dating</h2>
-          <h2>
-            Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first
-            true Clicking.
-          </h2>
+          <h2>GoDatingFi will now be working with 0xPolygon to help expand the base of web3 users for dating apps</h2>
         </div>
         <article className={cx('products-first')}>
           <div className={cx('prduct-first-left')}>
@@ -76,12 +75,7 @@ const Products = () => {
             </div>
             <div className={cx('products-third-right')}>
               <h2 className="gdf-heading-14">NFT</h2>
-              <h2>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia rem iste nulla recusandae cum placeat, in
-                molestiae architecto similique magnam commodi culpa excepturi, voluptates obcaecati minima repellat
-                repellendus velit fugiat sed quas. Sed impedit, aut deserunt alias, deleniti aperiam debitis repellat
-                voluptatibus dolor quas ad!
-              </h2>
+              <h2>View all other people's profiles with your NFT cards, and earn GoDatingFi coins while dating</h2>
             </div>
           </div>
         </article>
@@ -91,10 +85,10 @@ const Products = () => {
           </div>
 
           <div className={cx('product-fourth-left')}>
-            <h2 className="gdf-heading-14">Exchange</h2>
+            <h2 className="gdf-heading-14">Marketplace</h2>
             <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem quam congue sed risus sapien a. Mi
-              imperdiet vitae id rhoncus ante commodo id. Facilisi arcu et fusce eget dictumst risus sodales nisi.
+              GoDatingFi users could start trading NFT items on the Marketplace to earn enormous financial benefits.
+              Moreover, users can give gifts by NFT and convert photos into NFT according to each person's liking.
             </h2>
           </div>
           <div className={cx('product-fourth-right')}>
@@ -102,10 +96,10 @@ const Products = () => {
               <div className={cx('bg-color-gradient-ellipse')}></div>
             </div>
             <span className={cx('smarphone-left')}>
-              <CardNFT />
+              <CardNFT icon={NFT04} />
             </span>
             <span className={cx('smarphone-right')}>
-              <CardNFT />
+              <CardNFT icon={NFT03} />
             </span>
           </div>
         </article>

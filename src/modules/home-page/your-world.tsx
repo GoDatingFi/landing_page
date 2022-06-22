@@ -8,7 +8,7 @@ import Protected from 'assets/images/home/protected.svg';
 import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
-const PersonCard = () => {
+const YourWorld = () => {
   return (
     <section className={cx('wrapper')}>
       <div className={cx('bg-gradient-ellipse')}>
@@ -50,4 +50,4 @@ const PersonCard = () => {
   );
 };
 
-export default PersonCard;
+export default YourWorld;

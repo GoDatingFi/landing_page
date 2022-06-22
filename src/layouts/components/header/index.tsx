@@ -37,13 +37,14 @@ const Navbar = () => {
         <div className={cx('banner')}>
           <div className={cx('banner-content')}>
             <div className={cx('content')}>
-              <h1 className="gdf-heading-14">The best way to date</h1>
+              <h1 className="gdf-heading-14">Dating app with blockchain</h1>
+              <h2 className={cx('paragraph')}>A decentralized Global Platform for Dating.</h2>
               <h2 className={cx('paragraph')}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, lacus platea volutpat vulputate
-                elementum egestas blandit. Eu commodo interdum lacinia placerat velit malesuada. Aliquam pellentesque
-                congue accumsan tristique cras platea. Consequat semper euismod ornare ut aenean sit.
+                We are a team of SocialFi blockchain in ASIA, We bring experience dating with blockchain apps.
               </h2>
-              <Button className={cx('btn-regis')}>Register now</Button>
+              <a href="https://t.me/+fNtO9-m-YewyZTVl" target="_blank">
+                <Button className={cx('btn-regis')}>Join the Community</Button>
+              </a>
             </div>
             <div className={cx('qrcode')}>
               <p className="gdf-heading-8">Get the app</p>

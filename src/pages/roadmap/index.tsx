@@ -42,7 +42,7 @@ const Partners: NextPageWithLayout = () => {
                 <header>
                   <p className={cx('progress-title')}>
                     <span>June 2022</span>
-                    <span className="gdf-heading-10">Cryto Chain</span>
+                    <span className="gdf-heading-10">ICO Start</span>
                   </p>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
@@ -60,7 +60,7 @@ const Partners: NextPageWithLayout = () => {
                 <header>
                   <p className={cx('progress-title')}>
                     <span>July 2022</span>
-                    <span className="gdf-heading-10">Cryto Chain</span>
+                    <span className="gdf-heading-10">Token Sell</span>
                   </p>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
@@ -78,7 +78,7 @@ const Partners: NextPageWithLayout = () => {
                 <header>
                   <p className={cx('progress-title')}>
                     <span>August 2022</span>
-                    <span className="gdf-heading-10">Cryto Chain</span>
+                    <span className="gdf-heading-10">Exchange Chain</span>
                   </p>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
