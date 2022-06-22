@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Heart from 'assets/images/icons/heart.svg';
 import Start from 'assets/images/icons/start.svg';
 import Person from 'assets/images/icons/person.svg';
-import Bitcoin from 'assets/images/icons/bitcoin.svg';
+import Matic from 'assets/images/crypto-currency/matic.svg';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 const cx = classNames.bind(styles);
@@ -41,8 +41,8 @@ const CardNFT = ({ icon }: Props) => {
             <div className={cx('nft-price')}>
               <p>$ 10.345</p>
               <p>
-                <Bitcoin />
-                6,300 DOR
+                <Matic />
+                6,300 MATIC
               </p>
             </div>
           </header>
