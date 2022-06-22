@@ -85,7 +85,7 @@ const Tokens: NextPageWithLayout = () => {
 Tokens.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout
-      header="Pre-Sale & Values"
+      header="Token Genesis Event Information"
       description="Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true Clicking."
     >
       {page}

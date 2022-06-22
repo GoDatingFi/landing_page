@@ -60,8 +60,8 @@ const Review = () => {
           <h2 className={cx('header-title')}>Contact Info</h2>
           <h2>Get in touch</h2>
           <h2>
-            Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first
-            true Clicking.
+            Subscribe for the latest GoDatingFi updates and new version release for dating apps on the Web3, SocialFi,
+            Polygon
           </h2>
         </div>
         <article className={cx('form-contact')}>

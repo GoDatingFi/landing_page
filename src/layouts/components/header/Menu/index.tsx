@@ -6,8 +6,6 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const MenuHeader = () => {
-  console.log('MenuConst = ', MenuConst);
-
   return (
     <nav>
       <ul className={cx('navbar')}>
