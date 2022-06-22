@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="gdf-flex-center">
           <div className={cx('social-network')}>
-            <a href="https://github.com/GoDatingFi" target="_blank">
+            <a href="https://medium.com/@godatingfi" target="_blank">
               <Medium />
             </a>
             <a href="https://twitter.com/GoDatingFi" target="_blank">

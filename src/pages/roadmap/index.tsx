@@ -1,8 +1,8 @@
+import { ReactElement } from 'react';
+import Layout from 'layouts';
 import { NextPageWithLayout } from 'utils/interfaces';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
-import { ReactElement } from 'react';
-import Layout from 'layouts';
 const cx = classNames.bind(styles);
 
 const Partners: NextPageWithLayout = () => {
@@ -23,13 +23,12 @@ const Partners: NextPageWithLayout = () => {
               <div className={cx('step-inner')}>
                 <header>
                   <p className={cx('progress-title')}>
-                    <span>May 2022</span>
-                    <span className="gdf-heading-10">Cryto Chain</span>
+                    {/*<span>May 2022</span>*/}
+                    <span className="gdf-heading-10">Q2</span>
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
-                    vestibulum pellentesque sagittis semper ipsum. Quis ac vel et, nulla ut.
-                  </p>
+                  <p>Design UI/UX Web, Mobile </p>
+                  <p>Create spec for project</p>
+                  <p>Create white paper</p>
                 </header>
               </div>
             </li>
@@ -41,13 +40,15 @@ const Partners: NextPageWithLayout = () => {
               <div className={cx('step-inner')}>
                 <header>
                   <p className={cx('progress-title')}>
-                    <span>June 2022</span>
-                    <span className="gdf-heading-10">ICO Start</span>
+                    {/*<span>June 2022</span>*/}
+                    <span className="gdf-heading-10 text-center">Q3</span>
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
-                    vestibulum pellentesque sagittis semper ipsum. Quis ac vel et, nulla ut.
-                  </p>
+                  <p>Seed funding</p>
+                  <p>Private funding</p>
+                  <p>NFT minting</p>
+                  <p>NFT marketplace testnet</p>
+                  <p>Build channel & communities</p>
+                  <p>Build partnerships</p>
                 </header>
               </div>
             </li>
@@ -59,13 +60,15 @@ const Partners: NextPageWithLayout = () => {
               <div className={cx('step-inner')}>
                 <header>
                   <p className={cx('progress-title')}>
-                    <span>July 2022</span>
-                    <span className="gdf-heading-10">Token Sell</span>
+                    {/*<span>July 2022</span>*/}
+                    <span className="gdf-heading-10">Q4</span>
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
-                    vestibulum pellentesque sagittis semper ipsum. Quis ac vel et, nulla ut.
-                  </p>
+                  <p>IOS on the Testflight</p>
+                  <p>Android on the Google test</p>
+                  <p>Event testnet campaign</p>
+                  <p>Partnerships announcements</p>
+                  <p>NFT card sale</p>
+                  <p>NFT marketplace mainnet</p>
                 </header>
               </div>
             </li>
@@ -77,13 +80,13 @@ const Partners: NextPageWithLayout = () => {
               <div className={cx('step-inner')}>
                 <header>
                   <p className={cx('progress-title')}>
-                    <span>August 2022</span>
-                    <span className="gdf-heading-10">Exchange Chain</span>
+                    {/*<span>August 2022</span>*/}
+                    <span className="gdf-heading-10">Q1</span>
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida vitae adipiscing mauris
-                    vestibulum pellentesque sagittis semper ipsum. Quis ac vel et, nulla ut.
-                  </p>
+                  <p>IOS on the Apple Store</p>
+                  <p>Android on the Goolge Play</p>
+                  <p>IDO, IEO</p>
+                  <p>Soon</p>
                 </header>
               </div>
             </li>
