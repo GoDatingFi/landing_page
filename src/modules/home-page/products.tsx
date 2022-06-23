@@ -33,20 +33,19 @@ const Products = () => {
             </span>
           </div>
           <div className={cx('product-first-right')}>
-            <h2 className="gdf-heading-14">It’s easy to find that mystery person!</h2>
+            <h2 className="gdf-heading-14">Connect with people you know but haven’t met yet</h2>
             <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, lacus platea volutpat vulputate elementum
-              egestas blandit.{' '}
+              GoDatingFi is more than an app, it’s featured for SocialFi Blockchain. It is where people go to learn how
+              to establish and maintain healthier connections.
             </h2>
           </div>
         </article>
         <article className={cx('products-second')}>
           <div className={cx('products-second-inner')}>
             <div className={cx('products-second-left')}>
-              <h2 className="gdf-heading-14">It’s easy to find that mystery person!</h2>
+              <h2 className="gdf-heading-14">So, Why Choose A Dating App Like GoDatingFi?</h2>
               <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, lacus platea volutpat vulputate
-                elementum egestas blandit.{' '}
+                At GoDatingFi, it's easy for everyone to find their other half. We always listen and understand you.
               </h2>
             </div>
             <div className={cx('products-second-right')}>

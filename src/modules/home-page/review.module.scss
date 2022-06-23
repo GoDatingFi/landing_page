@@ -59,6 +59,9 @@
   padding-bottom: 40px;
 
   .review {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
     width: 100%;
 
     .review-header {
