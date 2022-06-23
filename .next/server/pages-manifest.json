@@ -1,11 +1,11 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
   "/404": "pages/404.html",
   "/": "pages/index.html",
-  "/_document": "pages/_document.js",
+  "/partners": "pages/partners.html",
   "/roadmap": "pages/roadmap.html",
   "/tokens": "pages/tokens.html",
-  "/partners": "pages/partners.html",
-  "/teams": "pages/teams.html"
+  "/teams": "pages/teams.html",
+  "/_error": "pages/_error.js"
 }
