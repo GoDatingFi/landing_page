@@ -4,7 +4,8 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  height: calc(100vh - 48px);
+  //height: calc(100vh - 48px);
+  height: calc(100vh);
   min-height: 899px;
   background: linear-gradient(180deg, #1d83ae 0%, #031d44 100%);
   overflow: hidden;
@@ -58,6 +59,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  z-index: 10;
 }
 
 .logo {
@@ -82,7 +84,6 @@
   justify-content: center;
   align-items: center;
   column-gap: 63px;
-  z-index: 10;
 }
 
 .banner {

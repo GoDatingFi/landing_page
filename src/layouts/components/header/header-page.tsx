@@ -2,10 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import LogoImg from 'assets/images/Logo.png';
 import BlockHeader from 'assets/images/banner/block-header.png';
-import styles from './header-page.module.scss';
-import classNames from 'classnames/bind';
 import MenuHeader from './Menu';
-import { ReactNode } from 'react';
+import classNames from 'classnames/bind';
+import styles from './header-page.module.scss';
 const cx = classNames.bind(styles);
 
 interface Props {

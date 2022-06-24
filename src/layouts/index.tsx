@@ -19,7 +19,7 @@ const Layout = ({ header = '', description = '', isHome = false, children }: Pro
   return (
     <div className="gdf-wrapper">
       <ScrollToTop className={cx('scroll-top-top')} component={<ScrollToTopSvg />} smooth />
-      <h2 className={cx('contract-address')}>Address: xxxxx</h2>
+      {/*<h2 className={cx('contract-address')}>Address: xxxxx</h2>*/}
       {isHome && <HeaderHome />}
       {!isHome && <HeaderPage header={header} description={description} />}
       <main className={cx('wrapper')}>

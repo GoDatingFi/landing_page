@@ -30,7 +30,7 @@ const Footer = () => {
               <QRCode2 />
               <QRCode1 />
             </div>
-            <p className="gdf-heading-1">Quét mã QR code để cài đặt ứng dụng</p>
+            <p className="gdf-heading-1">Scan QR code to get the app</p>
           </div>
         </div>
         <div className="gdf-flex-center">
