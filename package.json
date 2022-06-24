@@ -25,6 +25,7 @@
     "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.10",
+    "googleapis": "^104.0.0",
     "husky": "^8.0.1",
     "next": "12.1.6",
     "next-compose-plugins": "^2.2.1",

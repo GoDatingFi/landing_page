@@ -1,6 +1,5 @@
-import React, { useState, useRef, useCallback, useEffect, memo, useMemo } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
+import type { NextPage } from 'next';
 import UserIcon from 'assets/images/contact-info/user.svg';
 import EmailIcon from 'assets/images/contact-info/email.svg';
 import PhoneCallIcon from 'assets/images/contact-info/phonecall.svg';
@@ -8,7 +7,6 @@ import PencilIcon from 'assets/images/contact-info/pencil.svg';
 import Input from 'components/input';
 import TextArea from 'components/text-area';
 import Button from 'components/button';
-// import { appendSpreadsheet } from 'api/google-sheet/submit';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import { ERRORS } from 'utils/constant';
@@ -23,13 +21,22 @@ interface InitValues {
   message?: string;
 }
 
-const Review = () => {
-  const { handleSubmit, touched, errors, setFieldValue, handleChange, values, setFieldTouched } = useFormik({
+const Review: NextPage = () => {
+  const { handleSubmit, setSubmitting, errors, handleChange, values, resetForm } = useFormik({
     validateOnChange: false,
     initialValues: { name: '', email: '', phone: '', message: '' } as InitValues,
     onSubmit: async (values) => {
-      //TODO: submit form and write google sheet
-      // appendSpreadsheet(values);
+      const rawResponse = await fetch('/api/submit', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      await rawResponse.json();
+      setSubmitting(false);
+      resetForm();
     },
     validationSchema: () => {
       return Yup.object().shape({
@@ -65,18 +72,42 @@ const Review = () => {
           </h2>
         </div>
         <article className={cx('form-contact')}>
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+              e.preventDefault();
+            }}
+          >
             <div className={cx('input-info')}>
-              <Input name="name" placeholder="Your name" onChange={handleChange} preIcon={<UserIcon />} />
-              <Input name="email" placeholder="Your email" onChange={handleChange} preIcon={<EmailIcon />} />
-              <Input name="phone" placeholder="Your phone" onChange={handleChange} preIcon={<PhoneCallIcon />} />
+              <Input
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                preIcon={<UserIcon />}
+                placeholder="Your name"
+              />
+              <Input
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                preIcon={<EmailIcon />}
+                placeholder="Your email"
+              />
+              <Input
+                name="phone"
+                value={values.phone}
+                onChange={handleChange}
+                preIcon={<PhoneCallIcon />}
+                placeholder="Your phone"
+              />
             </div>
             <TextArea
               name="message"
-              placeholder="Enter message"
+              value={values.message}
               onChange={handleChange}
               maxLength={1000}
               preIcon={<PencilIcon />}
+              placeholder="Enter message"
             />
 
             <div className={cx('group-btn')}>
