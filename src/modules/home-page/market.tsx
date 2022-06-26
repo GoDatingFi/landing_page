@@ -19,8 +19,8 @@ const Market = () => {
           <h2 className={cx('header-title')}>market</h2>
           <h2>NFT & ICO crypto currency advantage</h2>
           <h2>
-            Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first
-            true Clicking.
+            GoDatingFi marketplace provides an efficient place for players to trade NFT cards on and earn massive
+            financial benefits
           </h2>
         </div>
         <div className={cx('advantages')}>

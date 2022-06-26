@@ -1,10 +1,12 @@
+import { ReactElement } from 'react';
+import Image from 'next/image';
 import { NextPageWithLayout } from 'utils/interfaces';
-import classNames from 'classnames/bind';
+import Layout from 'layouts';
 import Building from 'assets/images/token/building.svg';
 import GanttChart from 'assets/images/token/gantt-chart.svg';
+import GanttChartMobile from 'assets/images/token/gantt-chart.png';
+import classNames from 'classnames/bind';
 import styles from './index.module.scss';
-import { ReactElement } from 'react';
-import Layout from 'layouts';
 const cx = classNames.bind(styles);
 
 const Tokens: NextPageWithLayout = () => {
@@ -74,6 +76,7 @@ const Tokens: NextPageWithLayout = () => {
 
         <div className={cx('gantt-chart')}>
           <GanttChart />
+          <Image src={GanttChartMobile} alt="" />
         </div>
       </div>
 
@@ -86,7 +89,7 @@ Tokens.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout
       header="Token Genesis Event Information"
-      description="Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true Clicking."
+      description="GoDatingFI has been developed and brought to market by one of the most innovative and interdisciplinary teams in the world. The development team pool unlocks over 2 years, ensuring all stakeholders are aligned."
     >
       {page}
     </Layout>

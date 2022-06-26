@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './your-world.module.scss';
 import Heart from 'assets/images/home/heart.svg';
 import Message from 'assets/images/home/messages.svg';
 import Search from 'assets/images/home/search.svg';
 import Protected from 'assets/images/home/protected.svg';
 import classNames from 'classnames/bind';
+import styles from './your-world.module.scss';
 const cx = classNames.bind(styles);
 
 const YourWorld = () => {
@@ -18,28 +18,36 @@ const YourWorld = () => {
         <h2 className={cx('title-header')}>Your world</h2>
         <div className={cx('content')}>
           <article>
-            <Heart />
+            <span>
+              <Heart />
+            </span>
             <header>
               <p>Approximately 3 million members logged in daily.</p>
             </header>
           </article>
 
           <article>
-            <Message />
+            <span>
+              <Message />
+            </span>
             <header>
               <p>Multiple ways to connect with members.</p>
             </header>
           </article>
 
           <article>
-            <Search />
+            <span>
+              <Search />
+            </span>
             <header>
               <p>Search for members who have your favourite traits.</p>
             </header>
           </article>
 
           <article>
-            <Protected />
+            <span>
+              <Protected />
+            </span>
             <header>
               <p>High level of security, ensuring user's personal information</p>
             </header>

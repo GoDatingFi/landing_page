@@ -10,4 +10,10 @@
     bottom: 0;
     background: var(--gdf-white);
   }
+
+  @media (max-width: 767px) {
+    &::before {
+      display: none;
+    }
+  }
 }

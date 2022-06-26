@@ -7,6 +7,12 @@
   background: linear-gradient(180deg, #1d83ae 0%, #031d44 100%);
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 767px) {
+    &.scrollFixed {
+      z-index: 12;
+    }
+  }
 }
 
 .bg-gradient {
@@ -49,6 +55,12 @@
   max-width: var(--gdf-default-container-width);
   height: 100%;
   padding: 0 32px;
+
+  @media (max-width: 767px) {
+    row-gap: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .menu-header {
@@ -56,6 +68,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 96px;
   z-index: 10;
 }
 
@@ -64,6 +77,12 @@
     display: flex;
     align-items: center;
     column-gap: 12px;
+
+    @media (max-width: 767px) {
+      & > span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -81,6 +100,49 @@
   justify-content: center;
   align-items: center;
   column-gap: 63px;
+
+  .overlay {
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    animation: faceIn linear 0.2s;
+  }
+
+  @media (max-width: 767px) {
+    a {
+      display: flex;
+      z-index: 10;
+    }
+    .overlay.active {
+      position: fixed;
+      display: block;
+    }
+  }
+
+  .reorder-three,
+  .close {
+    display: none;
+
+    @media (max-width: 767px) {
+      &.active {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        z-index: 99;
+      }
+
+      path {
+        fill: var(--gdf-white);
+      }
+
+      span {
+        display: flex;
+      }
+    }
+  }
 }
 
 .banner {
@@ -90,12 +152,22 @@
   height: 100%;
   align-items: center;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
   .banner-content {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
     flex-basis: 65%;
-    z-index: 10;
+    z-index: 1;
+
+    @media (max-width: 767px) {
+      justify-content: center;
+    }
 
     .content {
       display: flex;
@@ -103,18 +175,9 @@
       row-gap: 24px;
       flex-wrap: wrap;
 
-      .paragraph {
-        width: 75%;
-      }
-
-      .btn-regis {
-        background-color: var(--gdf-purple-medium);
-        color: var(--gdf-white);
-        width: 167px;
-        padding: 15px 28px;
-
-        &:hover {
-          opacity: 0.8;
+      @media (max-width: 767px) {
+        h1 {
+          font: var(--font-heading-12);
         }
       }
     }
@@ -141,5 +204,14 @@
       mix-blend-mode: color-dodge;
       opacity: 0.4;
     }
+  }
+}
+
+@keyframes faceIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

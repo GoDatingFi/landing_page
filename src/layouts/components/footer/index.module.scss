@@ -16,7 +16,14 @@
   row-gap: 5px;
   width: 100%;
   max-width: var(--gdf-default-container-width);
-  padding: 0 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  @media (max-width: 767px) {
+    row-gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .logo {
@@ -36,6 +43,10 @@
   svg + svg {
     margin-left: 12px;
   }
+
+  @media (max-width: 767px) {
+    align-items: center;
+  }
 }
 
 .social-network {
@@ -51,4 +62,7 @@
 
 .w-empty {
   min-width: 288px;
+  @media (max-width: 767px) {
+    display: none;
+  }
 }

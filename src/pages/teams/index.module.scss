@@ -15,6 +15,11 @@
     max-width: var(--gdf-default-container-width);
     padding: 102px 32px 148px;
     position: relative;
+
+    @media (max-width: 767px) {
+      row-gap: 88px;
+      padding: 124px 15px 148px;
+    }
   }
 
   .bg-team {
@@ -78,6 +83,10 @@
   gap: 63px 32px;
   width: 100%;
 
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(calc(100% / 2 - 32px), 1fr));
+  }
+
   .card {
     display: flex;
     align-items: center;
@@ -87,18 +96,33 @@
     row-gap: 19px;
 
     &:hover {
-      .social-network {
+      .mask-social-network {
         position: absolute;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        column-gap: 8px;
         width: 100%;
         height: 100%;
         bottom: 0;
         padding-bottom: 15%;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
         z-index: 10;
+
+        @media (max-width: 767px) {
+          padding-bottom: 8%;
+        }
+
+        .social-network {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          column-gap: 8px;
+
+          @media (max-width: 767px) {
+            transform: scale(0.6);
+          }
+        }
       }
 
       .card-image {
@@ -137,15 +161,13 @@
       overflow: hidden;
       position: relative;
 
-      & a {
+      & > div {
         width: 100%;
         position: absolute;
         top: 0;
-      }
-
-      & span {
-        width: 100% !important;
-        height: 100% !important;
+        right: 0;
+        bottom: 0;
+        left: 0;
       }
 
       img {

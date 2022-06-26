@@ -3,10 +3,10 @@ const Menu = [
     to: '/',
     label: 'Home',
   },
-  {
-    to: `${process.env.NEXT_PUBLIC_MARKETPLACE_URL}`,
-    label: 'Market',
-  },
+  // {
+  //   to: `${process.env.NEXT_PUBLIC_MARKETPLACE_URL}`,
+  //   label: 'Market',
+  // },
   {
     to: '/tokens',
     label: 'Token',

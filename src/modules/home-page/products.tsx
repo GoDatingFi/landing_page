@@ -82,7 +82,6 @@ const Products = () => {
           <div className={cx('bg-gradient-ellipse')}>
             <div className={cx('bg-color-gradient-ellipse')}></div>
           </div>
-
           <div className={cx('product-fourth-left')}>
             <h2 className="gdf-heading-14">Marketplace</h2>
             <h2>
