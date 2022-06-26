@@ -5,11 +5,17 @@
   align-items: flex-start;
   width: 100%;
   //height: calc(100vh - 48px);
-  height: calc(100vh);
-  min-height: 899px;
+  height: 100vh;
+  min-height: 100%;
   background: linear-gradient(180deg, #1d83ae 0%, #031d44 100%);
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 767px) {
+    &.scrollFixed {
+      position: fixed;
+    }
+  }
 }
 
 .bg-gradient {
@@ -52,6 +58,12 @@
   height: 100%;
   max-width: var(--gdf-default-container-width);
   padding: 0 32px;
+
+  @media (max-width: 767px) {
+    row-gap: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .menu-header {
@@ -59,6 +71,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 96px;
   z-index: 10;
 }
 
@@ -67,6 +80,12 @@
     display: flex;
     align-items: center;
     column-gap: 12px;
+
+    @media (max-width: 767px) {
+      & > span {
+        display: none;
+      }
+    }
   }
 }
 
@@ -84,6 +103,49 @@
   justify-content: center;
   align-items: center;
   column-gap: 63px;
+
+  .overlay {
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    animation: faceIn linear 0.2s;
+  }
+
+  @media (max-width: 767px) {
+    a {
+      display: flex;
+      z-index: 10;
+    }
+    .overlay.active {
+      position: fixed;
+      display: block;
+    }
+  }
+
+  .reorder-three,
+  .close {
+    display: none;
+
+    @media (max-width: 767px) {
+      &.active {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        z-index: 99;
+      }
+
+      path {
+        fill: var(--gdf-white);
+      }
+
+      span {
+        display: flex;
+      }
+    }
+  }
 }
 
 .banner {
@@ -93,12 +155,17 @@
   height: 100%;
   align-items: center;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .banner-content {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
     flex-basis: 50%;
-    z-index: 10;
+    z-index: 1;
 
     .content {
       display: flex;
@@ -106,8 +173,17 @@
       row-gap: 24px;
       flex-wrap: wrap;
 
+      @media (max-width: 767px) {
+        h1 {
+          font: var(--font-heading-12);
+        }
+      }
+
       .paragraph {
         width: 85%;
+        @media (max-width: 767px) {
+          width: 100%;
+        }
       }
 
       .btn-regis {
@@ -115,6 +191,10 @@
         color: var(--gdf-white);
         width: max-content;
         padding: 15px 28px;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
 
         &:hover {
           opacity: 0.8;
@@ -143,5 +223,14 @@
       object-fit: cover;
       object-position: center center;
     }
+  }
+}
+
+@keyframes faceIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

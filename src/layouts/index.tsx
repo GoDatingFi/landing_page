@@ -18,7 +18,7 @@ interface Props {
 const Layout = ({ header = '', description = '', isHome = false, children }: Props) => {
   return (
     <div className="gdf-wrapper">
-      <ScrollToTop className={cx('scroll-top-top')} component={<ScrollToTopSvg />} smooth />
+      {/*<ScrollToTop className={cx('scroll-top-top')} component={<ScrollToTopSvg />} smooth />*/}
       {/*<h2 className={cx('contract-address')}>Address: xxxxx</h2>*/}
       {isHome && <HeaderHome />}
       {!isHome && <HeaderPage header={header} description={description} />}

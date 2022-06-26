@@ -5,6 +5,9 @@ import BlockHeader from 'assets/images/banner/block-header.png';
 import MenuHeader from './Menu';
 import classNames from 'classnames/bind';
 import styles from './header-page.module.scss';
+import { useState } from 'react';
+import ReorderThree from 'assets/icons/reorder-three.svg';
+import CloseNavbar from 'assets/icons/close-svgrepo-com.svg';
 const cx = classNames.bind(styles);
 
 interface Props {
@@ -13,8 +16,10 @@ interface Props {
 }
 
 const Navbar = ({ header = '', description = '' }: Props) => {
+  const [navbarMobile, setNavbarMobile] = useState<boolean>(false);
+
   return (
-    <header className={cx('wrapper')}>
+    <header className={cx('wrapper', { scrollFixed: navbarMobile })}>
       <div className={cx('bg-gradient')}></div>
       <div className={cx('bg-gradient-ellipse')}>
         <div className={cx('bg-color-gradient-ellipse')}></div>
@@ -31,7 +36,12 @@ const Navbar = ({ header = '', description = '' }: Props) => {
           </h2>
 
           <div className={cx('menu')}>
-            <MenuHeader />
+            <MenuHeader navbarMobile={navbarMobile} />
+            <a onClick={() => setNavbarMobile(!navbarMobile)}>
+              <div className={cx('overlay', { active: navbarMobile })}></div>
+              <ReorderThree className={cx('reorder-three', { active: !navbarMobile })} />
+              <CloseNavbar className={cx('close', { active: navbarMobile })} />
+            </a>
           </div>
         </div>
 

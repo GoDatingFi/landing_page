@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import LogoImg from 'assets/images/Logo.png';
 import Couple from 'assets/images/banner/couple.png';
 import Button from 'components/button';
 import MenuHeader from './Menu';
+import ReorderThree from 'assets/icons/reorder-three.svg';
+import CloseNavbar from 'assets/icons/close-svgrepo-com.svg';
 import QRCode2 from 'assets/images/icons/qrcode-2.svg';
 import QRCode1 from 'assets/images/icons/qrcode-1.svg';
 import classNames from 'classnames/bind';
@@ -12,8 +15,10 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Navbar = () => {
+  const [navbarMobile, setNavbarMobile] = useState<boolean>(false);
+
   return (
-    <header className={cx('wrapper')}>
+    <header className={cx('wrapper', { scrollFixed: navbarMobile })}>
       <div className={cx('bg-gradient')}></div>
       <div className={cx('bg-gradient-ellipse')}>
         <div className={cx('bg-color-gradient-ellipse')}></div>
@@ -30,7 +35,12 @@ const Navbar = () => {
           </h2>
 
           <div className={cx('menu')}>
-            <MenuHeader />
+            <MenuHeader navbarMobile={navbarMobile} />
+            <a onClick={() => setNavbarMobile(!navbarMobile)}>
+              <div className={cx('overlay', { active: navbarMobile })}></div>
+              <ReorderThree className={cx('reorder-three', { active: !navbarMobile })} />
+              <CloseNavbar className={cx('close', { active: navbarMobile })} />
+            </a>
           </div>
         </div>
 

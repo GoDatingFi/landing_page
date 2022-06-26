@@ -116,7 +116,7 @@ const Carousel = ({
         >
           {renderImages}
         </Styled.Box>
-        <Styled.DotsGroup className="dots-group">{renderDots}</Styled.DotsGroup>
+        {hasDots && <Styled.DotsGroup className="dots-group">{renderDots}</Styled.DotsGroup>}
         {renderNavigators}
       </Styled.Wrap>
     </Styled.Container>

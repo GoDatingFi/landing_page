@@ -4,7 +4,7 @@ import IconStar from 'assets/images/icons/icon-star.svg';
 import Avatar from 'assets/images/nft/nft-02.png';
 import DoubleQuotes from 'assets/images/icons/double-quotes.svg';
 import Carousel from 'components/carousel';
-import { reviews } from 'utils/page/review';
+import { reviews } from 'utils/page/reviews';
 import classNames from 'classnames/bind';
 import styles from './review.module.scss';
 import { useMemo } from 'react';
