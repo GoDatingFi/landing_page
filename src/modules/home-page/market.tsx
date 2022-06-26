@@ -30,7 +30,7 @@ const Market = () => {
             </div>
             <header>
               <p className="gdf-heading-12">Safe & Secure</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p>Modular 'security as a service', brings the best security mechanism for users</p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
@@ -42,7 +42,10 @@ const Market = () => {
             </div>
             <header>
               <p className="gdf-heading-12">Low Cost</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p>
+                Polygon solves common blockchain pain points, offering low gas fees and high speeds without sacrificing
+                security
+              </p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
@@ -54,7 +57,9 @@ const Market = () => {
             </div>
             <header>
               <p className="gdf-heading-12">Universal Accesse</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p>
+                GoDatingFi is built on the web3 blockchain. So, that everyone can access and use the application easily
+              </p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
@@ -66,7 +71,10 @@ const Market = () => {
             </div>
             <header>
               <p className="gdf-heading-12">Early Profit</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p>
+                The user can start a date. GoDatingFi will return rewards when users match with friends of the opposite
+                sex
+              </p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
@@ -77,8 +85,11 @@ const Market = () => {
               <SecureInvest />
             </div>
             <header>
-              <p className="gdf-heading-12">Secure Investt</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p className="gdf-heading-12">Secure Invest</p>
+              <p>
+                Tokennomic is always publicly available to the community. We always keep investors' information
+                confidential
+              </p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
@@ -90,7 +101,7 @@ const Market = () => {
             </div>
             <header>
               <p className="gdf-heading-12">Easy Wallet</p>
-              <p>Lorem ipsum dolor sit amet elit sed consectetur amet tempor dolor sit amet elit sed dolor sit.</p>
+              <p>Metamask has always been the leading cryptocurrency wallet of Dapps today</p>
             </header>
             <div className={cx('arrow-up-right-icon')}>
               <ArrowUpRight />
