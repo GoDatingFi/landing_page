@@ -15,6 +15,10 @@
     margin-top: 124px;
   }
 
+  @media (min-width: 768px) and (max-width: 1023px) {
+    margin-top: 200px;
+  }
+
   .inner {
     display: flex;
     flex-direction: column;
@@ -36,7 +40,7 @@
     text-align: center;
     font: var(--font-heading-14);
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       font: var(--font-heading-12);
     }
   }
@@ -60,14 +64,14 @@
     color: var(--gdf-purple-heliotrope);
     font: var(--font-heading-8);
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       font: var(--font-heading-6);
     }
   }
 
   h2:nth-child(2) {
     font: var(--font-heading-14);
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       font: var(--font-heading-12);
     }
   }
@@ -77,7 +81,7 @@
     padding-left: 148px;
     padding-right: 148px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -93,6 +97,7 @@
 
   @media (max-width: 767px) {
     grid-template-columns: repeat(1, minmax(calc(100% / 1 - 32px), 1fr));
+    gap: 32px 24px;
   }
 
   .advantage {
@@ -105,7 +110,7 @@
     padding: 48px;
     position: relative;
 
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       flex-direction: column;
       padding: 32px 24px;
       row-gap: 24px;
@@ -114,9 +119,9 @@
     header {
       @extend .flex-row;
       row-gap: 4px;
-      @media (max-width: 767px) {
+      @media (max-width: 1023px) {
         row-gap: 24px;
-        p:nth-child(1) {
+        p {
           text-align: center;
         }
       }
@@ -132,7 +137,7 @@
       height: 100%;
       align-items: flex-start;
 
-      @media (max-width: 767px) {
+      @media (max-width: 1023px) {
         position: absolute;
         top: 32px;
         right: 24px;

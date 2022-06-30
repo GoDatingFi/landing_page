@@ -36,6 +36,13 @@
       padding: 124px 15px 148px;
       height: 100%;
     }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      flex-direction: column;
+      padding-top: 124px;
+      row-gap: 88px;
+      height: 100%;
+    }
   }
 }
 
@@ -64,7 +71,7 @@
   flex-basis: 40%;
   overflow: hidden;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     flex-basis: 100%;
     overflow: initial;
   }

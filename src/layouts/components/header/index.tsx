@@ -11,7 +11,6 @@ import QRCode2 from 'assets/images/icons/qrcode-2.svg';
 import QRCode1 from 'assets/images/icons/qrcode-1.svg';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
-
 const cx = classNames.bind(styles);
 
 const Navbar = () => {
@@ -37,7 +36,9 @@ const Navbar = () => {
           <div className={cx('menu')}>
             <MenuHeader navbarMobile={navbarMobile} />
             <a onClick={() => setNavbarMobile(!navbarMobile)}>
-              <div className={cx('overlay', { active: navbarMobile })}></div>
+              <div className={cx('overlay', { active: navbarMobile })}>
+                <div className={cx('bg-overlay')}></div>
+              </div>
               <ReorderThree className={cx('reorder-three', { active: !navbarMobile })} />
               <CloseNavbar className={cx('close', { active: navbarMobile })} />
             </a>

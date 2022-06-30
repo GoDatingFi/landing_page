@@ -67,6 +67,14 @@
     row-gap: 24px;
   }
 
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-columns: repeat(2, minmax(calc(100% / 2 - 32px), 1fr));
+    gap: 63px 32px;
+    width: 100%;
+  }
+
   article {
     display: flex;
     align-items: center;

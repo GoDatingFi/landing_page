@@ -19,7 +19,7 @@
     row-gap: 103px;
     width: 100%;
     max-width: var(--gdf-default-container-width);
-    padding: 188px 32px 148px;
+    padding: 188px 32px;
     position: relative;
 
     @media (max-width: 767px) {
@@ -70,6 +70,11 @@
       row-gap: 48px;
     }
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+      grid-template-columns: repeat(2, minmax(calc(100% / 2 - 48px), 1fr));
+      gap: 64px 0;
+    }
+
     &:before {
       border: 0;
       border-top: 2px solid var(--gdf-purple-heliotrope);
@@ -86,6 +91,10 @@
         border-left: 2px solid var(--gdf-purple-heliotrope);
         width: 2px;
         height: 100%;
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        border: none;
       }
     }
 
@@ -106,6 +115,11 @@
           flex-direction: row;
           column-gap: 32px;
         }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        border-top: 2px solid var(--gdf-purple-heliotrope);
+        align-items: flex-start;
       }
 
       .progress-point {

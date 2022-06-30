@@ -4,6 +4,8 @@ import NFT03 from 'assets/images/nft/nft-03.png';
 import NFT04 from 'assets/images/nft/nft-04.png';
 import SmartphoneImg1 from 'assets/images/home/smartphone-img1.png';
 import SmartphoneImg2 from 'assets/images/home/smartphone-img2.png';
+import SmartphoneImg3 from 'assets/images/home/smartphone-img3.png';
+import SmartphoneImg4 from 'assets/images/home/smartphone-img4.png';
 import NFTGroup from 'assets/images/home/nft-group.svg';
 import CardNFT from 'modules/card-nft/index';
 import classNames from 'classnames/bind';
@@ -53,10 +55,10 @@ const Products = () => {
                 <div className={cx('bg-color-gradient-ellipse')}></div>
               </div>
               <span className={cx('smarphone-left')}>
-                <Image src={SmartphoneImg1} alt={''} />
+                <Image src={SmartphoneImg3} alt={''} />
               </span>
               <span className={cx('smarphone-right')}>
-                <Image src={SmartphoneImg2} alt={''} />
+                <Image src={SmartphoneImg4} alt={''} />
               </span>
             </div>
           </div>

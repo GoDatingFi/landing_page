@@ -36,9 +36,11 @@ const Navbar = ({ header = '', description = '' }: Props) => {
           </h2>
 
           <div className={cx('menu')}>
-            <MenuHeader navbarMobile={navbarMobile} />
+            <MenuHeader navbarMobile={navbarMobile} onClick={() => setNavbarMobile(!navbarMobile)} />
             <a onClick={() => setNavbarMobile(!navbarMobile)}>
-              <div className={cx('overlay', { active: navbarMobile })}></div>
+              <div className={cx('overlay', { active: navbarMobile })}>
+                <div className={cx('bg-overlay')}></div>
+              </div>
               <ReorderThree className={cx('reorder-three', { active: !navbarMobile })} />
               <CloseNavbar className={cx('close', { active: navbarMobile })} />
             </a>

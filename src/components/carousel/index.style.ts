@@ -87,6 +87,9 @@ const Styled = {
   DotsGroup: styled.div`
     margin: 40px auto auto auto;
     text-align: center;
+    @media (max-width: 767px) {
+      margin-top: 28px;
+    }
   `,
   Dot: styled(DotSvg)<{ $isActive: boolean }>`
     fill: ${({ $isActive }) => ($isActive ? '#7B47E1' : '#c6c6d7')};
@@ -95,6 +98,10 @@ const Styled = {
     width: 8px;
     height: 8px;
     cursor: pointer;
+
+    @media (max-width: 767px) {
+      transform: scale(0.6);
+    }
   `,
   Prev: styled.div<{ disabled: boolean }>`
     ${navigatorModifiers};

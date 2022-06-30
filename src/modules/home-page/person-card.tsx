@@ -17,35 +17,37 @@ const PersonCard = () => {
         <div className={cx('card-image')}>
           <div>
             <Image src={item.avatar} alt={item.name} />
-            <div className={cx('social-network')}>
-              {item.socials &&
-                item.socials.map((social, index) => (
-                  <div key={index}>
-                    {social.facebook && (
-                      <Link href={social.facebook} passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-                    )}
+            <div className={cx('mask-social-network')}>
+              <div className={cx('social-network')}>
+                {item.socials &&
+                  item.socials.map((social, index) => (
+                    <div key={index}>
+                      {social.facebook && (
+                        <Link href={social.facebook} passHref>
+                          <span>
+                            <Facebook />
+                          </span>
+                        </Link>
+                      )}
 
-                    {social.twitter && (
-                      <Link href={social.twitter} passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-                    )}
+                      {social.twitter && (
+                        <Link href={social.twitter} passHref>
+                          <span>
+                            <Twitter />
+                          </span>
+                        </Link>
+                      )}
 
-                    {social.linkedin && (
-                      <Link href={social.linkedin} passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    )}
-                  </div>
-                ))}
+                      {social.linkedin && (
+                        <Link href={social.linkedin} passHref>
+                          <span>
+                            <Linkedin />
+                          </span>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
@@ -71,7 +73,7 @@ const PersonCard = () => {
             hasNavigator={false}
             hasDots={false}
             data={renderPersonsCard}
-            numberPerViewport={1}
+            numberPerViewport={2}
           />
         </div>
       </div>
