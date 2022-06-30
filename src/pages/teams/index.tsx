@@ -1,13 +1,9 @@
 import { NextPageWithLayout } from 'utils/interfaces';
 import Image from 'next/image';
-import { ReactElement } from 'react';
+import { ReactElement, useCallback } from 'react';
 import Layout from 'layouts';
 import Link from 'next/link';
-import Image1 from 'assets/images/nft/nft-01.png';
-import Image2 from 'assets/images/nft/nft-02.png';
-import Image3 from 'assets/images/nft/nft-03.png';
-import Image4 from 'assets/images/nft/nft-04.png';
-import Image5 from 'assets/images/nft/nft-05.png';
+import TeamsMember from 'utils/page/teams.const';
 import Facebook from 'assets/images/social-media/facebook-card.svg';
 import Twitter from 'assets/images/social-media/twitter-card.svg';
 import Linkedin from 'assets/images/social-media/linkedin-card.svg';
@@ -17,6 +13,61 @@ import styles from './index.module.scss';
 const cx = classNames.bind(styles);
 
 const Partners: NextPageWithLayout = () => {
+  const renderCard = useCallback((teams: any) => {
+    return teams.map((item: any, index: number) => (
+      <article key={index} className={cx('card')}>
+        <div className={cx('card-image')}>
+          <div>
+            <Image src={item.image} alt="" />
+            <div className={cx('mask-social-network')}>
+              <div className={cx('social-network')}>
+                {item.socials &&
+                  item.socials.map((social: any, index: number) => (
+                    <div key={index}>
+                      {social.facebook && (
+                        <Link href={social.facebook} passHref>
+                          <a target="_blank">
+                            <span>
+                              <Facebook />
+                            </span>
+                          </a>
+                        </Link>
+                      )}
+
+                      {social.twitter && (
+                        <Link href={social.twitter} passHref>
+                          <a target="_blank">
+                            <span>
+                              <Twitter />
+                            </span>
+                          </a>
+                        </Link>
+                      )}
+
+                      {social.linkedin && (
+                        <Link href={social.linkedin} passHref>
+                          <a target="_blank">
+                            <span>
+                              <Linkedin />
+                            </span>
+                          </a>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <header className={cx('card-content')}>
+          <div className={cx('bg-mask')}></div>
+          <p className={cx('title')}>{item.name}</p>
+          <p className={cx('summary')}>{item.position}</p>
+        </header>
+      </article>
+    ));
+  }, []);
+
   return (
     <div className={cx('wrapper')}>
       <div className={cx('inner')}>
@@ -26,173 +77,7 @@ const Partners: NextPageWithLayout = () => {
           </div>
 
           <h2 className="gdf-heading-14">Our Best Leadership</h2>
-          <div className={cx('cards')}>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image1} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image2} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image3} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image4} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image5} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-          </div>
+          <div className={cx('cards')}>{renderCard(TeamsMember.leadership)}</div>
         </div>
 
         <div className={cx('group-teams')}>
@@ -202,338 +87,7 @@ const Partners: NextPageWithLayout = () => {
           </div>
 
           <h2 className="gdf-heading-14">Advisor</h2>
-          <div className={cx('cards')}>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image1} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image2} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image3} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image4} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image5} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image1} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image2} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image3} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image4} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image5} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-          </div>
+          <div className={cx('cards')}>{renderCard(TeamsMember.advisor)}</div>
         </div>
 
         <div className={cx('group-teams')}>
@@ -542,338 +96,7 @@ const Partners: NextPageWithLayout = () => {
           </div>
 
           <h2 className="gdf-heading-14">Team member</h2>
-          <div className={cx('cards')}>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image1} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image2} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image3} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image4} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image5} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image1} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image2} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image3} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image4} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-            <article className={cx('card')}>
-              <div className={cx('card-image')}>
-                <div>
-                  <Image src={Image5} alt="" />
-                  <div className={cx('mask-social-network')}>
-                    <div className={cx('social-network')}>
-                      <Link href="https://www.facebook.com/" passHref>
-                        <span>
-                          <Facebook />
-                        </span>
-                      </Link>
-
-                      <Link href="https://twitter.com/" passHref>
-                        <span>
-                          <Twitter />
-                        </span>
-                      </Link>
-
-                      <Link href="https://www.linkedin.com/" passHref>
-                        <span>
-                          <Linkedin />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <header className={cx('card-content')}>
-                <div className={cx('bg-mask')}></div>
-                <p className={cx('title')}>Ava, 25</p>
-                <p className={cx('summary')}>Sanya, Chinas</p>
-              </header>
-            </article>
-          </div>
+          <div className={cx('cards')}>{renderCard(TeamsMember.teams)}</div>
         </div>
       </div>
       <BackgroundTeam className={cx('bg-team')} />
