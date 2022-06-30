@@ -13,12 +13,18 @@
     row-gap: 200px;
     width: 100%;
     max-width: var(--gdf-default-container-width);
-    padding: 102px 32px 148px;
+    padding: 188px 32px;
     position: relative;
 
     @media (max-width: 767px) {
       row-gap: 88px;
       padding: 124px 15px 148px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      padding-top: 124px;
+      padding-bottom: 148px;
+      row-gap: 124px;
     }
   }
 
@@ -83,8 +89,11 @@
   gap: 63px 32px;
   width: 100%;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     grid-template-columns: repeat(2, minmax(calc(100% / 2 - 32px), 1fr));
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
   }
 
   .card {
@@ -192,6 +201,10 @@
       .title {
         font: var(--font-heading-10);
         z-index: 2;
+
+        @media (max-width: 1023px) {
+          font: var(--font-heading-6);
+        }
       }
 
       .summary {

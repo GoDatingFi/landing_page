@@ -11,12 +11,12 @@
     color: var(--gdf-blue-ghost);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     position: fixed;
     display: grid;
     grid-auto-rows: minmax(min-content, max-content);
-    grid-template-columns: repeat(2, minmax(calc(100% / 2 - 32px), 1fr));
-    gap: 32px 24px;
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
+    row-gap: 24px;
     padding: 44px 24px;
     text-align: center;
     top: 84px;
@@ -24,7 +24,6 @@
     left: 0;
     max-width: 100%;
     height: max-content;
-    background: var(--gdf-blue-tangaroa);
     transform: translateX(100%);
     transition: transform linear 350ms;
     z-index: 12;
