@@ -21,8 +21,8 @@ const Tokens: NextPageWithLayout = () => {
           <header>
             <p className="gdf-heading-12">Distribution of tokens</p>
             <p>
-              The genesis block was created in Oct 202, with 400 million GDF. For transparency, the breakdown of genesis
-              block holders is outlined below
+              The genesis block was created in Oct 2022, with 400 million GDF. For transparency, the breakdown of
+              genesis block holders is outlined below
             </p>
           </header>
 
