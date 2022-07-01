@@ -191,14 +191,21 @@
         drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.030926));
     }
 
-    .smarphone-left {
-      transform: rotate(-12.13deg);
-      z-index: 99;
-    }
+    .smarphones {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
 
-    .smarphone-right {
-      transform: rotate(6.34deg);
-      z-index: 99;
+      .smarphone-left {
+        transform: rotate(-12.13deg);
+        z-index: 99;
+      }
+
+      .smarphone-right {
+        transform: rotate(6.34deg);
+        z-index: 99;
+      }
     }
 
     img {

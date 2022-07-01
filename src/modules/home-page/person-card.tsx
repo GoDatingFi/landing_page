@@ -65,7 +65,7 @@ const PersonCard = () => {
   return (
     <section className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <div className={cx('cards')}>
+        <div data-aos="fade-up" data-aos-duration="1000" className={cx('cards')}>
           {renderPersonsCard}
           <Carousel
             className={cx('carousel-personal-mobile')}

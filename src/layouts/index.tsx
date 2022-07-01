@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import ScrollToTop from 'react-scroll-to-top';
 import ScrollToTopSvg from 'assets/icons/scroll-top-top.svg';
+import HeadApp from './head';
 import HeaderHome from './components/header';
 import HeaderPage from './components/header/header-page';
 import Footer from './components/footer';
@@ -18,6 +19,7 @@ interface Props {
 const Layout = ({ header = '', description = '', isHome = false, children }: Props) => {
   return (
     <div className="gdf-wrapper">
+      <HeadApp />
       <ScrollToTop className={cx('scroll-top-top')} component={<ScrollToTopSvg />} smooth />
       {/*<h2 className={cx('contract-address')}>Address: xxxxx</h2>*/}
       {isHome && <HeaderHome />}

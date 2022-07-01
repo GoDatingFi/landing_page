@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import LogoImg from 'assets/images/Logo.png';
 import Couple from 'assets/images/banner/couple.png';
+import CoupleSvg from 'assets/images/banner/couple.svg';
 import Button from 'components/button';
 import MenuHeader from './Menu';
 import ReorderThree from 'assets/icons/reorder-three.svg';
@@ -48,25 +49,32 @@ const Navbar = () => {
         <div className={cx('banner')}>
           <div className={cx('banner-content')}>
             <div className={cx('content')}>
-              <h1 className="gdf-heading-14">Dating app with blockchain</h1>
-              <h2 className={cx('paragraph')}>A decentralized Global Platform for Dating.</h2>
-              <h2 className={cx('paragraph')}>
-                We are a team of SocialFi blockchain in ASIA, We bring experience dating with blockchain apps.
+              <h1 data-aos="fade-right" data-aos-duration="1000" className="gdf-heading-14">
+                Dating app with blockchain
+              </h1>
+              <h2 data-aos="fade-right" data-aos-duration="1000" className={cx('paragraph')}>
+                A decentralized Global Platform for Dating.
               </h2>
-              <a href="https://t.me/+fNtO9-m-YewyZTVl" target="_blank">
+              <h2 data-aos="fade-right" data-aos-duration="1000" className={cx('paragraph')}>
+                We are a team of SocialFi blockchain in JAPAN, We bring experience dating with blockchain apps.
+              </h2>
+              <a data-aos="fade-right" data-aos-duration="1000" href="https://t.me/+fNtO9-m-YewyZTVl" target="_blank">
                 <Button className={cx('btn-regis')}>Join the Community</Button>
               </a>
             </div>
             <div className={cx('qrcode')}>
-              <p className="gdf-heading-8">Get the app</p>
-              <div>
+              <p data-aos="fade-right" data-aos-duration="1000" className="gdf-heading-8">
+                Get the app
+              </p>
+              <div data-aos="fade-right" data-aos-duration="1000">
                 <QRCode2 />
                 <QRCode1 />
               </div>
             </div>
           </div>
-          <div className={cx('banner-image')}>
+          <div data-aos="fade-left" data-aos-duration="1000" className={cx('banner-image')}>
             <Image src={Couple} alt={''} />
+            <CoupleSvg />
           </div>
         </div>
       </div>
