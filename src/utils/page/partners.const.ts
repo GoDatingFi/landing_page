@@ -23,10 +23,6 @@ const PartnersDefault = [
   },
   {
     name: '',
-    logo: Partner4,
-  },
-  {
-    name: '',
     logo: Partner5,
   },
   {

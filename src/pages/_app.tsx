@@ -1,10 +1,13 @@
+import { useEffect } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import type { AppProps } from 'next/app';
+import type { NextPage } from 'next';
+import Aos from 'aos';
 import 'assets/styles/godatingfi.scss';
+import 'aos/dist/aos.css';
 import { reload } from 'utils/functions';
 import ErrorBoundary from 'components/error-boundary';
 import { Slide, ToastContainer } from 'react-toastify';
-import type { ReactElement, ReactNode } from 'react';
-import type { NextPage } from 'next';
 import Layout from 'layouts';
 
 type NextPageWithLayout = NextPage & {
@@ -17,6 +20,10 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
+
+  useEffect(() => {
+    Aos.init();
+  });
 
   return (
     <ErrorBoundary onReset={reload}>
