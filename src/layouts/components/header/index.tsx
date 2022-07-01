@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import LogoImg from 'assets/images/Logo.png';
 import Couple from 'assets/images/banner/couple.png';
-import CoupleSvg from 'assets/images/banner/couple.svg';
 import Button from 'components/button';
 import MenuHeader from './Menu';
 import ReorderThree from 'assets/icons/reorder-three.svg';
@@ -74,7 +73,6 @@ const Navbar = () => {
           </div>
           <div data-aos="fade-left" data-aos-duration="1000" className={cx('banner-image')}>
             <Image src={Couple} alt={''} />
-            <CoupleSvg />
           </div>
         </div>
       </div>

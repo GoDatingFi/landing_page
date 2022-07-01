@@ -232,18 +232,8 @@
     overflow: hidden;
 
     img {
-      display: none !important;
       object-fit: cover;
       object-position: center center;
-    }
-
-    @media (max-width: 1023px) {
-      img {
-        display: block !important;
-      }
-      svg {
-        display: none;
-      }
     }
   }
 }

@@ -150,14 +150,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var utils_functions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9024);
-/* harmony import */ var components_error_boundary__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9983);
-/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3590);
-/* harmony import */ var layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9925);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_toastify__WEBPACK_IMPORTED_MODULE_1__]);
-react_toastify__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9783);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var utils_functions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9024);
+/* harmony import */ var components_error_boundary__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9983);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3590);
+/* harmony import */ var layouts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2041);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_toastify__WEBPACK_IMPORTED_MODULE_3__]);
+react_toastify__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -172,22 +176,28 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
+
 function MyApp({
   Component,
   pageProps
 }) {
-  const getLayout = Component.getLayout ?? (page => /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(layouts__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+  const getLayout = Component.getLayout ?? (page => /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(layouts__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
     children: page
   }));
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(components_error_boundary__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z, {
-    onReset: utils_functions__WEBPACK_IMPORTED_MODULE_4__/* .reload */ .H5,
-    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(react_toastify__WEBPACK_IMPORTED_MODULE_1__.ToastContainer, {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    aos__WEBPACK_IMPORTED_MODULE_1___default().init();
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(components_error_boundary__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+    onReset: utils_functions__WEBPACK_IMPORTED_MODULE_6__/* .reload */ .H5,
+    children: [/*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(react_toastify__WEBPACK_IMPORTED_MODULE_3__.ToastContainer, {
       hideProgressBar: true,
       position: 'top-right',
-      transition: react_toastify__WEBPACK_IMPORTED_MODULE_1__.Slide,
+      transition: react_toastify__WEBPACK_IMPORTED_MODULE_3__.Slide,
       limit: 1
-    }), getLayout( /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx(Component, _objectSpread({}, pageProps)))]
+    }), getLayout( /*#__PURE__*/react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx(Component, _objectSpread({}, pageProps)))]
   });
 }
 
@@ -279,6 +289,13 @@ const reload = () => {
 
   (_window = window) === null || _window === void 0 ? void 0 : (_window$location = _window.location) === null || _window$location === void 0 ? void 0 : (_window$location$relo = _window$location.reload) === null || _window$location$relo === void 0 ? void 0 : _window$location$relo.call(_window$location);
 };
+
+/***/ }),
+
+/***/ 9783:
+/***/ ((module) => {
+
+module.exports = require("aos");
 
 /***/ }),
 
@@ -422,6 +439,13 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
+/***/ 968:
+/***/ ((module) => {
+
+module.exports = require("next/head");
+
+/***/ }),
+
 /***/ 1853:
 /***/ ((module) => {
 
@@ -471,7 +495,7 @@ module.exports = import("react-toastify");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [922,61,925,635], () => (__webpack_exec__(1336)));
+var __webpack_exports__ = __webpack_require__.X(0, [922,61,41,635], () => (__webpack_exec__(1336)));
 module.exports = __webpack_exports__;
 
 })();
