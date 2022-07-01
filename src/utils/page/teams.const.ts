@@ -108,13 +108,17 @@ const TeamsMember = {
       name: 'Jin Sogami',
       image: Team04,
       position: 'Senior Backend',
-      socials: [{ facebook: '' }, { twitter: '' }, { linkedin: '' }],
+      socials: [{ facebook: '' }, { twitter: '' }, { linkedin: 'https://www.linkedin.com/in/jin-sogami-b5a096244/' }],
     },
     {
       name: 'Hiroyuki Ikeuchi',
       image: Team05,
       position: 'Senior Backend',
-      socials: [{ facebook: '' }, { twitter: '' }, { linkedin: '' }],
+      socials: [
+        { facebook: '' },
+        { twitter: '' },
+        { linkedin: 'https://www.linkedin.com/in/%E3%83%A2%E3%83%A2-%E3%82%B9-989131110/' },
+      ],
     },
     {
       name: 'Leo',
@@ -132,7 +136,11 @@ const TeamsMember = {
       name: 'Masaki Shioda',
       image: Team08,
       position: 'Senior Blockchain',
-      socials: [{ facebook: '' }, { twitter: '' }, { linkedin: '' }],
+      socials: [
+        { facebook: '' },
+        { twitter: '' },
+        { linkedin: 'https://www.linkedin.com/in/masaki-shioda-124007244/' },
+      ],
     },
     {
       name: 'Masakazu Karasaki',

@@ -1,16 +1,20 @@
+import { ReactElement, useCallback, useMemo } from 'react';
+import Image from 'next/image';
 import { NextPageWithLayout } from 'utils/interfaces';
+import PartnersDefault from 'utils/page/partners.const';
 import classNames from 'classnames/bind';
-import Partner1 from 'assets/images/partner/partner-1.svg';
-import Partner2 from 'assets/images/partner/partner-2.svg';
-import Partner3 from 'assets/images/partner/partner-3.svg';
-import Partner4 from 'assets/images/partner/partner-4.svg';
-import Partner5 from 'assets/images/partner/partner-5.svg';
 import styles from './index.module.scss';
-import { ReactElement } from 'react';
 import Layout from 'layouts';
 const cx = classNames.bind(styles);
 
 const Partners: NextPageWithLayout = () => {
+  const renderPartners = useMemo(() => {
+    return PartnersDefault.map((item, index) => (
+      <article key={index} className={cx('backer')}>
+        <Image src={item.logo} alt={item.name} />
+      </article>
+    ));
+  }, []);
   return (
     <div className={cx('wrapper')}>
       <div className={cx('bg-gradient')}></div>
@@ -18,56 +22,8 @@ const Partners: NextPageWithLayout = () => {
         <div className={cx('bg-gradient-ellipse')}>
           <div className={cx('bg-color-gradient-ellipse')}></div>
         </div>
-        <h2 className="gdf-heading-14">Backer by</h2>
-        <div className={cx('backers')}>
-          <article className={cx('backer')}>
-            <Partner1 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner2 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner3 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner4 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner5 />
-          </article>
-
-          <article className={cx('backer')}>
-            <Partner1 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner2 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner3 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner4 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner5 />
-          </article>
-
-          <article className={cx('backer')}>
-            <Partner1 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner2 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner3 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner4 />
-          </article>
-          <article className={cx('backer')}>
-            <Partner5 />
-          </article>
-        </div>
+        <h2 className="gdf-heading-14">Partner</h2>
+        <div className={cx('backers')}>{renderPartners}</div>
       </div>
     </div>
   );
