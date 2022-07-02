@@ -1,5 +1,4 @@
-import { ReactElement, useEffect } from 'react';
-import Aos from 'aos';
+import { ReactElement } from 'react';
 import Layout from 'layouts';
 import PersonCard from 'modules/home-page/person-card';
 import YourWorld from 'modules/home-page/your-world';
@@ -10,10 +9,6 @@ import ContactInfo from 'modules/home-page/contact-info';
 import { NextPageWithLayout } from 'utils/interfaces';
 
 const Home: NextPageWithLayout = () => {
-  useEffect(() => {
-    Aos.init();
-  });
-
   return (
     <>
       <PersonCard />

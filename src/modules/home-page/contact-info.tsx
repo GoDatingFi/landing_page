@@ -64,18 +64,14 @@ const Review: NextPage = () => {
     <section className={cx('wrapper')}>
       <div className={cx('inner')}>
         <div className={cx('section-header')}>
-          <h2 data-aos="fade-up" data-aos-duration="1000" className={cx('header-title')}>
-            Contact Info
-          </h2>
-          <h2 data-aos="fade-up" data-aos-duration="1000">
-            Get in touch
-          </h2>
-          <h2 data-aos="fade-up" data-aos-duration="1000">
+          <h2 className={cx('header-title')}>Contact Info</h2>
+          <h2>Get in touch</h2>
+          <h2>
             Subscribe for the latest GoDatingFi updates and new version release for dating apps on the Web3, SocialFi,
             Polygon
           </h2>
         </div>
-        <article data-aos="fade-up" data-aos-duration="1000" className={cx('form-contact')}>
+        <article className={cx('form-contact')}>
           <form
             onSubmit={(e) => {
               handleSubmit(e);

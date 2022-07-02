@@ -15,10 +15,8 @@ const YourWorld = () => {
         <div className={cx('bg-color-gradient-ellipse')}></div>
       </div>
       <div className={cx('inner')}>
-        <h2 data-aos="fade-up" data-aos-duration="1000" className={cx('title-header')}>
-          Your world
-        </h2>
-        <div data-aos="fade-up" data-aos-duration="1000" className={cx('content')}>
+        <h2 className={cx('title-header')}>Your world</h2>
+        <div className={cx('content')}>
           <article>
             <span>
               <Heart />

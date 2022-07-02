@@ -16,19 +16,15 @@ const Market = () => {
     <section className={cx('wrapper')}>
       <div className={cx('inner')}>
         <div className={cx('section-header')}>
-          <h2 data-aos="fade-up" data-aos-duration="1000" className={cx('header-title')}>
-            market
-          </h2>
-          <h2 data-aos="fade-up" data-aos-duration="1000">
-            NFT & ICO crypto currency advantage
-          </h2>
-          <h2 data-aos="fade-up" data-aos-duration="1000">
+          <h2 className={cx('header-title')}>market</h2>
+          <h2>NFT & ICO crypto currency advantage</h2>
+          <h2>
             GoDatingFi marketplace provides an efficient place for players to trade NFT cards on and earn massive
             financial benefits
           </h2>
         </div>
         <div className={cx('advantages')}>
-          <article data-aos="fade-right" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <SafeSecure />
             </div>
@@ -40,7 +36,7 @@ const Market = () => {
               <ArrowUpRight />
             </div>
           </article>
-          <article data-aos="fade-left" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <LowCost />
             </div>
@@ -55,7 +51,7 @@ const Market = () => {
               <ArrowUpRight />
             </div>
           </article>
-          <article data-aos="fade-right" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <UniversalAccess />
             </div>
@@ -69,7 +65,7 @@ const Market = () => {
               <ArrowUpRight />
             </div>
           </article>
-          <article data-aos="fade-left" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <EarlyProfit />
             </div>
@@ -84,7 +80,7 @@ const Market = () => {
               <ArrowUpRight />
             </div>
           </article>
-          <article data-aos="fade-right" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <SecureInvest />
             </div>
@@ -99,7 +95,7 @@ const Market = () => {
               <ArrowUpRight />
             </div>
           </article>
-          <article data-aos="fade-left" data-aos-duration="1000" className={cx('advantage')}>
+          <article className={cx('advantage')}>
             <div>
               <EasyWallet />
             </div>
