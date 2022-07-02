@@ -2,8 +2,6 @@ import type { ReactElement, ReactNode } from 'react';
 import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import type { NextPage } from 'next';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import 'assets/styles/godatingfi.scss';
 import { reload } from 'utils/functions';
 import ErrorBoundary from 'components/error-boundary';
@@ -20,14 +18,6 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
-
-  useEffect(() => {
-    AOS.init({
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50,
-    });
-  }, []);
 
   return (
     <ErrorBoundary onReset={reload}>
