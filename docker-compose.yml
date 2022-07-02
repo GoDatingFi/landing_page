@@ -4,6 +4,7 @@ services:
   go.dating.fi.lading.page.frontend:
     image: edwardpm1206/go-dating-fi-landing-page-frontend:latest
     container_name: landing-page-frontend
+    restart: unless-stopped
     build:
       context: .
       dockerfile: .docker/Dockerfile.development

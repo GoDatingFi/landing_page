@@ -18,7 +18,7 @@ const HeadApp = () => (
       property="og:description"
       content="SocialFi stands for Social Finance, it is a combination of social networking and finance on Blockchain. GoDatingFi also is a future of SocialFi"
     />
-    <meta property="og:image" content={process.env.NEXT_PUBLIC_DOMAIN + '/couple.png'} key="ogimage" />
+    <meta property="og:image" content={process.env.NEXT_PUBLIC_DOMAIN + '/logo.png'} key="ogimage" />
 
     <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
