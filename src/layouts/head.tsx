@@ -19,17 +19,6 @@ const HeadApp = () => (
       content="SocialFi stands for Social Finance, it is a combination of social networking and finance on Blockchain. GoDatingFi also is a future of SocialFi"
     />
     <meta property="og:image" content={process.env.NEXT_PUBLIC_DOMAIN + '/logo.png'} key="ogimage" />
-
-    <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.ico" />
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon-16x16.ico" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#202763" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700&display=swap" rel="stylesheet" />
   </Head>
 );
 

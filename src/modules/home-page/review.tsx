@@ -50,10 +50,14 @@ const Review = () => {
     <section className={cx('wrapper')}>
       <div className={cx('inner')}>
         <div className={cx('section-header')}>
-          <h2 className={cx('header-title')}>review</h2>
-          <h2>Testimonials</h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000" className={cx('header-title')}>
+            review
+          </h2>
+          <h2 data-aos="fade-up" data-aos-duration="1000">
+            Testimonials
+          </h2>
         </div>
-        <div className={cx('reviews')}>
+        <div data-aos="fade-up" data-aos-duration="2000" className={cx('reviews')}>
           <Carousel hasNavigator={false} data={renderReview} numberPerViewport={1} />
         </div>
       </div>

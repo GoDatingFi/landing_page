@@ -1,5 +1,6 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import Layout from 'layouts';
+import Aos from 'aos';
 import PersonCard from 'modules/home-page/person-card';
 import YourWorld from 'modules/home-page/your-world';
 import Products from 'modules/home-page/products';
@@ -9,6 +10,22 @@ import ContactInfo from 'modules/home-page/contact-info';
 import { NextPageWithLayout } from 'utils/interfaces';
 
 const Home: NextPageWithLayout = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      delay: 50,
+      offset: 100,
+      once: false,
+    });
+    window.addEventListener(
+      'touchmove',
+      () => {
+        Aos.refresh();
+      },
+      false,
+    );
+  }, []);
+
   return (
     <>
       <PersonCard />

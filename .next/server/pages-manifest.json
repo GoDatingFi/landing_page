@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html",
   "/api/submit": "pages/api/submit.js",
@@ -7,6 +8,5 @@
   "/partners": "pages/partners.html",
   "/roadmap": "pages/roadmap.html",
   "/teams": "pages/teams.html",
-  "/tokens": "pages/tokens.html",
-  "/_error": "pages/_error.js"
+  "/tokens": "pages/tokens.html"
 }
