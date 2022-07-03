@@ -5,9 +5,9 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/jpwbM6jVLo3veCFolJZHX/_buildManifest.js",
-    "static/jpwbM6jVLo3veCFolJZHX/_ssgManifest.js",
-    "static/jpwbM6jVLo3veCFolJZHX/_middlewareManifest.js"
+    "static/p_9R8eO4VgBJ9dsnaE_Aa/_buildManifest.js",
+    "static/p_9R8eO4VgBJ9dsnaE_Aa/_ssgManifest.js",
+    "static/p_9R8eO4VgBJ9dsnaE_Aa/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
@@ -30,7 +30,7 @@
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-610cc49e6bc63129.js",
       "static/css/324cc68ddf720b6f.css",
-      "static/chunks/pages/_app-e44171de60aa813f.js"
+      "static/chunks/pages/_app-5ce22f2460fda600.js"
     ],
     "/_error": [
       "static/chunks/webpack-678a8f967f49aee2.js",
@@ -57,7 +57,7 @@
       "static/chunks/framework-5f4595e5518b5600.js",
       "static/chunks/main-610cc49e6bc63129.js",
       "static/css/1571c76ff09a72de.css",
-      "static/chunks/pages/teams-b85ce84286245a87.js"
+      "static/chunks/pages/teams-480b71267b4a0f18.js"
     ],
     "/tokens": [
       "static/chunks/webpack-678a8f967f49aee2.js",

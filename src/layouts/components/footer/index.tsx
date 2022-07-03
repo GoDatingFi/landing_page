@@ -51,7 +51,7 @@ const Footer = () => {
               <Discord />
             </a>
           </div>
-          <p className="gdf-heading-3">GoDatingFi©2021 by GoDatingFi.com</p>
+          <p className="gdf-heading-3">GoDatingFi©2022 by GoDatingFi.com</p>
           <div className={cx('w-empty')}></div>
         </div>
       </div>

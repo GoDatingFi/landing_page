@@ -123,7 +123,7 @@ const TeamsMember = {
     {
       name: 'Leo',
       image: Team06,
-      position: 'Senior FontEnd',
+      position: 'Senior Frontend',
       socials: [{ facebook: '' }, { twitter: '' }, { linkedin: '' }],
     },
     {
@@ -145,7 +145,7 @@ const TeamsMember = {
     {
       name: 'Masakazu Karasaki',
       image: Team09,
-      position: 'Senior Fontend',
+      position: 'Senior Frontend',
       socials: [{ facebook: '' }, { twitter: '' }, { linkedin: '' }],
     },
   ],
