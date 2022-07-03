@@ -21,7 +21,9 @@ const Layout = ({ header = '', description = '', isHome = false, children }: Pro
     <div className="gdf-wrapper">
       <HeadApp />
       <ScrollToTop className={cx('scroll-top-top')} component={<ScrollToTopSvg />} smooth />
-      {/*<h2 className={cx('contract-address')}>Address: xxxxx</h2>*/}
+      <h2 className={cx('contract-address')}>
+        Contract Address on Polygon : 0x2A7a1F361713941CB59462AF1a7E92192b4aDC73
+      </h2>
       {isHome && <HeaderHome />}
       {!isHome && <HeaderPage header={header} description={description} />}
       <main className={cx('wrapper')}>
