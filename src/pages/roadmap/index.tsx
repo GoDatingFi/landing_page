@@ -13,7 +13,7 @@ const Partners: NextPageWithLayout = () => {
         <div className={cx('bg-gradient-ellipse')}>
           <div className={cx('bg-color-gradient-ellipse')}></div>
         </div>
-        <h2 className="gdf-heading-14">Partner roadmap</h2>
+        <h2 className="gdf-heading-14">Roadmap</h2>
         <div className={cx('timelines')}>
           <ul className={cx('progress-bar')}>
             <li className={cx('progress')}>

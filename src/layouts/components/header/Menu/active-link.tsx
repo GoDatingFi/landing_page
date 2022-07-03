@@ -5,15 +5,20 @@ import Link, { LinkProps } from 'next/link';
 type Props = LinkProps & {
   children: ReactElement;
   activeClassName: string;
+  target?: string;
 };
 
-const ActiveLink = ({ children, activeClassName, ...props }: Props) => {
+const ActiveLink = ({ children, activeClassName, target = '_self', ...props }: Props) => {
   const { asPath } = useRouter();
   const childClassName = children.props.className ?? '';
   const newClassName = `${childClassName} ${activeClassName ?? ''}`;
   const className = asPath === props.href ? newClassName.trim() : '';
 
-  return <Link {...props}>{cloneElement(children, { className })}</Link>;
+  return (
+    <Link {...props}>
+      <a target={target}>{cloneElement(children, { className })}</a>
+    </Link>
+  );
 };
 
 export default ActiveLink;

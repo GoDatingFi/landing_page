@@ -5,6 +5,8 @@
   "/404": "pages/404.html",
   "/api/submit": "pages/api/submit.js",
   "/": "pages/index.html",
+  "/marketplace": "pages/marketplace.html",
+  "/mobile": "pages/mobile.html",
   "/partners": "pages/partners.html",
   "/roadmap": "pages/roadmap.html",
   "/teams": "pages/teams.html",

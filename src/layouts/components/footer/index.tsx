@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoImg from 'assets/images/Logo.png';
-import QRCode1 from 'assets/images/icons/qrcode-1.svg';
-import QRCode2 from 'assets/images/icons/qrcode-2.svg';
+import QRCode from 'assets/images/icons/qrcode.svg';
 import Medium from 'assets/images/social-media/medium.svg';
 import Twitter from 'assets/images/social-media/twitter.svg';
 import Telegram from 'assets/images/social-media/telegram.svg';
@@ -26,10 +25,7 @@ const Footer = () => {
             </Link>
           </h2>
           <div className={cx('qrcode')}>
-            <div>
-              <QRCode2 />
-              <QRCode1 />
-            </div>
+            <QRCode />
             <p className="gdf-heading-1">Scan QR code to get the app</p>
           </div>
         </div>

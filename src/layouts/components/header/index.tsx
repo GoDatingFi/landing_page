@@ -7,8 +7,7 @@ import Button from 'components/button';
 import MenuHeader from './Menu';
 import ReorderThree from 'assets/icons/reorder-three.svg';
 import CloseNavbar from 'assets/icons/close-svgrepo-com.svg';
-import QRCode2 from 'assets/images/icons/qrcode-2.svg';
-import QRCode1 from 'assets/images/icons/qrcode-1.svg';
+import QRCode from 'assets/images/icons/qrcode.svg';
 import classNames from 'classnames/bind';
 import styles from './index.module.scss';
 const cx = classNames.bind(styles);
@@ -66,8 +65,7 @@ const Navbar = () => {
                 Get the app
               </p>
               <div data-aos="fade-right" data-aos-duration="1000">
-                <QRCode2 />
-                <QRCode1 />
+                <QRCode />
               </div>
             </div>
           </div>
