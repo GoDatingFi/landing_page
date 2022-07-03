@@ -17,7 +17,7 @@ const MenuHeader = ({ navbarMobile = false, onClick }: Props) => {
         {MenuConst &&
           MenuConst.map((item, index) => (
             <li key={index} className={cx('navbar-item')}>
-              <ActiveLink href={item.to} activeClassName="nav-active">
+              <ActiveLink href={item.to} target={item.redirect ? '_blank' : '_self'} activeClassName="nav-active">
                 <span>{item.label}</span>
               </ActiveLink>
             </li>

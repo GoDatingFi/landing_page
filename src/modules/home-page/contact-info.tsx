@@ -4,6 +4,7 @@ import UserIcon from 'assets/images/contact-info/user.svg';
 import EmailIcon from 'assets/images/contact-info/email.svg';
 import PhoneCallIcon from 'assets/images/contact-info/phonecall.svg';
 import PencilIcon from 'assets/images/contact-info/pencil.svg';
+import BackgroundBottom from 'assets/images/coming-soon.svg';
 import Input from 'components/input';
 import TextArea from 'components/text-area';
 import Button from 'components/button';
@@ -122,6 +123,7 @@ const Review: NextPage = () => {
           </form>
         </article>
       </div>
+      <BackgroundBottom className={cx('bg-coming-soon')} />
     </section>
   );
 };
