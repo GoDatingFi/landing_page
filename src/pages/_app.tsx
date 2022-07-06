@@ -5,6 +5,7 @@ import type { NextPage } from 'next';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import 'assets/styles/godatingfi.scss';
+import 'react-toastify/dist/ReactToastify.css';
 import { reload } from 'utils/functions';
 import ErrorBoundary from 'components/error-boundary';
 import { Slide, ToastContainer } from 'react-toastify';
