@@ -18,7 +18,7 @@ interface Props {
 }
 
 const Layout = ({ header = '', description = '', isHome = false, children }: Props) => {
-  const [address, setAddress] = useState<string>('0x2A7a1F361713941CB59462AF1a7E92192b4aDC73');
+  const [address, setAddress] = useState<string>('0xB3554D555230b763BDc18a41e626B54be54401C1');
 
   return (
     <div className="gdf-wrapper">
